@@ -6,4 +6,4 @@ def home(request):
         signed_in = True
     else:
         signed_in = False
-    return render_to_response("home.html", {'signed_in':signed_in}, context_instance=RequestContext(request))
+    return render_to_response("home.html", {'user':request.user, 'signed_in':signed_in}, context_instance=RequestContext(request))

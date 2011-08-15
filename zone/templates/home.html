@@ -7,10 +7,12 @@
 		<h1 style='text-align:center'>Welcome to the StonedZone</h1>
 		
 		{% if signed_in %}
-		<p style='text-align:center'>You are logged in.</p>
+		<div style='text-align:center'><a href="#">Hey {{user.username}}!</a> | <a href="/account/logout/">Logout</a></div>
 		{% else %}
-		<p style='text-align:center'>Please login or create an account.</p>
+		<div style='text-align:center'><a href="/account/login/">Login</a> | <a href="/account/create/">Create an Account</a></div>
 		{% endif %}
+		
+		<h2 style='text-align:center'><a href="/video/index/" >Videos</a></h2>
 	</body>
 
 </html>
